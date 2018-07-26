@@ -9,7 +9,6 @@ Covered API Endpoints:
 /v2/commerce/delivery
 ---------------------
 *Authentication REQUIERED*
-
 `get_delivery()`
 
 Make sur to create the client with a valide API Key
@@ -89,7 +88,6 @@ returns :
 --------------------------------------
 
 *Authentication REQUIERED*
-
 `get_current_sell_transaction()`
 
 Return open sell orders
