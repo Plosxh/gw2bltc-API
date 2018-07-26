@@ -25,6 +25,30 @@ class Bltc(object):
         req = requests.get(url)
         return json.loads(req.content)
 
+    def get_current_buy_transaction(self):
+        """" Return coins and items waiting at the BLTC """
+        url = self.url +"commerce/transaction/current/buys?access_token="+self.apikey
+        req = requests.get(url)
+        return json.loads(req.content)
+
+    def get_history_buy_transaction(self):
+        """" Return coins and items waiting at the BLTC """
+        url = self.url +"commerce/transaction/history/buys?access_token="+self.apikey
+        req = requests.get(url)
+        return json.loads(req.content)
+
+    def get_current_sell_transaction(self):
+        """" Return coins and items waiting at the BLTC """
+        url = self.url +"commerce/transaction/current/sells?access_token="+self.apikey
+        req = requests.get(url)
+        return json.loads(req.content)
+
+    def get_history_sell_transaction(self):
+        """" Return coins and items waiting at the BLTC """
+        url = self.url +"commerce/transaction/history/sells?access_token="+self.apikey
+        req = requests.get(url)
+        return json.loads(req.content)
+
     def get_exchange():
         """ Return avaible exchange"""
         url = self.url +"commerc/exchange"

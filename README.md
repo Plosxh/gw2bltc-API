@@ -8,7 +8,7 @@ Covered API Endpoints:
 
 /v2/commerce/delivery
 ---------------------
-*REQUIERED Authentication*
+*Authentication REQUIERED*
 
 `get_delivery()`
 
@@ -82,9 +82,40 @@ returns :
 /v2/commerce/prices
 -------------------
 `get_prices(items)` => use when items is like : [{"id":9999,...},{"id":8888,...}]
+
 `get_prices_list(items)` => use when items is like : [9999,8888,7777]
 
+/v2/commerce/transactions/current/sells
+--------------------------------------
+
+*Authentication REQUIERED*
+
+`get_current_sell_transaction()`
+
+Return open sell orders
 
 
-/v2/commerce/transactions
---------------------------
+/v2/commerce/transactions/history/sells
+--------------------------------------
+
+*Authentication REQUIERED*
+
+`get_history_sell_transaction()`
+
+Return closed sell order
+
+/v2/commerce/transactions/current/buys
+--------------------------------------
+
+*Authentication REQUIERED*
+`get_current_buy_transaction()`
+
+Return open buy orders
+
+/v2/commerce/transactions/history/buys
+--------------------------------------
+
+*Authentication REQUIERED*
+`get_history_buy_transaction()`
+
+Return closed buy orders
