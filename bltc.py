@@ -7,6 +7,30 @@ class Bltc(object):
         self.url = "https://api.guildwars2.com/v2/"
         self.apikey = apiKey
 
+    def get_gem_exchange(self):
+        """Get amount a coins requiered for one gem and for 100 gems"""
+        url = self.url+"commerce/exchange/gems?quantity=10000&lang=en"
+        req = requests.get(url)
+        return json.loads(req.content)
+
+    def get_coin_exchange(self):
+        """Get the amout of coins traded for 1 gems the number of gems traded for 10000 coins"""
+        url = self.url+"commerce/exchange/coins?quantity=10000&lang=en"
+        req = requests.get(url)
+        return json.loads(req.content)
+
+    def get_delivery(self):
+        """" Return coins and items waiting at the BLTC """
+        url = self.url +"commerce/delivery?access_token="+self.apikey
+        req = requests.get(url)
+        return json.loads(req.content)
+
+    def get_exchange():
+        """ Return avaible exchange"""
+        url = self.url +"commerc/exchange"
+        req = requests.get(url)
+        return json.loads(req.content)
+
     def get_item(self,items):
         """Get Items infos."""
         url = self.url+"items?ids="
