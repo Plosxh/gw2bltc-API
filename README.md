@@ -1,9 +1,10 @@
 
 #Usage:
+=======
 see example.py
 
-#Covered API Endpoints:
-
+Covered API Endpoints:
+=======================
 /v2/commerce/delivery
 /v2/commerce/exchange
 /v2/commerce/exchange/coins
