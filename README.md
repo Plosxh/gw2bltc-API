@@ -3,6 +3,12 @@ Usage:
 =======
 see example.py
 
+Requirement:
+============
+
+- Python 3.6
+- requests lib `pip install requests`
+
 Covered API Endpoints:
 =======================
 
