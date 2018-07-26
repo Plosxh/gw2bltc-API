@@ -117,3 +117,13 @@ Return open buy orders
 `get_history_buy_transaction()`
 
 Return closed buy orders
+
+Extras API Endpoints:
+=======================
+
+Ectos Price
+------------
+
+`get_ecto_price()`
+
+Return Glob of Ectoplasm price
