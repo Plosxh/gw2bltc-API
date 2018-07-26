@@ -14,13 +14,15 @@ Covered API Endpoints:
 
 Make sur to create the client with a valide API Key
 
-```{
+```
+{
 
   "coins": 0, => coins waiting at BLTC
 
   "items": [] => list of items Waiting to withdraw
 
-}```
+}
+```
 
 
 /v2/commerce/exchange
@@ -30,13 +32,15 @@ Make sur to create the client with a valide API Key
 
 Return a list of exchangeable currencies
 
-```[
+```
+[
 
   "coins",
 
   "gems"
 
-]```
+]
+```
 
 
 /v2/commerce/exchange/coins
@@ -44,26 +48,30 @@ Return a list of exchangeable currencies
 
 `get_gem_price()`
 
-```{
+```
+{
 
   "coins_per_gem": 5000, => number of copper requiered for One gem
 
   "quantity": 2 => number of gem get for 10000 gems
 
-}```
+}
+```
 
 /v2/commerce/exchange/gems
 ---------------------------
 `get_gem_price()`
 
 returns :
-```{
+```
+{
 
   "coins_per_gem": 1852, => number of copper recieved for a single gem
 
   "quantity": 18524866 => number of copper recieved for 10000 gems
 
-}```
+}
+```
 
  /v2/commerce/listings
  ----------------------
