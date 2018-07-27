@@ -49,7 +49,7 @@ class Bltc(object):
         req = requests.get(url)
         return json.loads(req.content)
 
-    def get_exchange():
+    def get_exchange(self):
         """ Return avaible exchange"""
         url = self.url +"commerc/exchange"
         req = requests.get(url)
