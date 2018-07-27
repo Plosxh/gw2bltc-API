@@ -17,7 +17,7 @@ Covered API Endpoints:
 *Authentication REQUIERED*
 `get_delivery()`
 
-Make sur to create the client with a valide API Key
+Make sure to create the client with a valid API Key
 
 ```
 {
