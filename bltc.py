@@ -60,7 +60,7 @@ class Bltc(object):
         url = self.url+"items?ids="
         for item in items:
             url += str(item["id"])+","
-        req = requests.get(url+"&lang=fr")
+        req = requests.get(url)
         items = json.loads(req.content)
         return items
 
@@ -69,7 +69,7 @@ class Bltc(object):
         url= self.url+"commerce/prices?ids="
         for item, key in items.items():
             url += str(key["id"])+","
-        req = requests.get(url+"&lang=fr")
+        req = requests.get(url)
         prices =  json.loads(req.content)
         return prices
 
@@ -85,7 +85,7 @@ class Bltc(object):
         url= self.url+"commerce/prices?ids="
         for item in items:
             url += str(item)+","
-        req = requests.get(url+"&lang=fr")
+        req = requests.get(url)
         prices =  json.loads(req.content)
         return prices
 
