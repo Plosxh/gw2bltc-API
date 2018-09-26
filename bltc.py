@@ -2,7 +2,6 @@ import json
 import requests
 from urllib.parse import urljoin
 
-
 def format_price(value, suffixes=("c", "s", "g")):
     parts = []
     for suffix in suffixes[:-1]:
@@ -79,6 +78,22 @@ class Bltc(object):
     def get_price(self, item_id):
         """Get Item's Price"""
         return self.get_prices([item_id])[0]
+
+    def is_rare_worth_salvaging(self, buy, sell):
+        """ Return a Boolean and profit of the rare after salvage """
+        profit = (sell + (self.get_ecto_price()) * 0.899) * 0.85
+        if buy < profit:
+            return True, profit
+        else:
+            return False, profit
+
+    def is_worth_flipping(self, buy, sell):
+        """ Return a Boolean and profit after Fees """
+        profit = sell * 0.85
+        if buy < profit:
+            return True, profit
+        else:
+            return False, profit
 
     def get_ecto_price(self):
         """Get Ecto Price"""
