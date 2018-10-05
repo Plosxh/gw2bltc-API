@@ -63,8 +63,12 @@ class Bltc(object):
 
     def get_items(self, item_ids):
         """Get Items infos."""
-        ids = ','.join(str(item_id) for item_id in item_ids)
-        return self._request("items", params=dict(ids=ids))
+        if item_ids != "":
+            ids = ','.join(str(item_id) for item_id in item_ids)
+            return self._request("items", params=dict(ids=ids))
+        else:
+            return self._request("items")
+
 
     def get_prices(self, item_ids):
         """Get Items Price"""
@@ -73,7 +77,9 @@ class Bltc(object):
 
     def get_item_listing(self, item_id):
         """Get Items Price Listing"""
-        return self._request("commerce/listings?ids={}".format(item_id))
+        url = "commerce/listings?ids="+str(item_id).strip('[]')
+        print(url)
+        return self._request(url)
 
     def get_price(self, item_id):
         """Get Item's Price"""
