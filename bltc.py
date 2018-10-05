@@ -77,9 +77,7 @@ class Bltc(object):
 
     def get_item_listing(self, item_id):
         """Get Items Price Listing"""
-        url = "commerce/listings?ids="+str(item_id).strip('[]')
-        print(url)
-        return self._request(url)
+        return self._request("commerce/listings?ids="+str(item_id).strip('[]'))
 
     def get_price(self, item_id):
         """Get Item's Price"""
